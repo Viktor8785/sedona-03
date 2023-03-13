@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="body-wrapper">
-    <div class="page-container">
-      <header>
-        <nav>
-          <a href="../index.html"><img src="../images/logo.png" width="138" height="71" alt="Лого Sedona"></a>
-          <ul>
+    <div class="page-container no-background-image">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul class="navigation-list">
             <li><a href="blank.html">Информация</a></li>
             <li><a href="blank.html">Фото и видео</a></li>
+            <li>
+              <a href="../index.html"><img src="../images/logo.png" width="138" height="71" alt="Лого Sedona"></a>
+            </li>
             <li><a href="blank.html">Карта штата</a></li>
             <li><a>Гостиницы</a></li>
           </ul>
@@ -137,21 +139,41 @@
             </ul>
           </section>
       </main>
-      <footer>
-        <section>
-          <h1>Контакты</h1>
-          <p>#visitSEDONA<br>ТЕЛ: +7(495) 666-01-66</p>
+      <footer class="footer-wrapper">
+        <section class="footer-section">
+          <div>
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="footer-contacts">#visitSEDONA<br>ТЕЛ: +7(495) 666-01-66</p>
+          </div>
         </section>
-        <section>
-          <h1>Соцсети</h1>
-          <a><img src="../images/twitter-icon.svg" width="17" height="17" alt="Twitter"></a>
-          <a><img src="../images/fb-icon.svg" width="12" height="22" alt="Facebook"></a>
-          <a><img src="../images/youtube.svg" width="20" height="16" alt="YouTube"></a>
+        <section class="footer-section">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <div class="footer-social-wrapper">
+              <a class="footer-social footer-social-twitter">
+                <div>
+                  <img src="../images/twitter-icon.svg" width="17" height="17" alt="Twitter">
+                </div>
+              </a>
+              <a class="footer-social footer-social-fb">
+                <div>
+                  <img src="../images/fb-icon.svg" width="12" height="22" alt="Facebook">
+                </div>
+              </a>
+              <a class="footer-social">
+                <div>
+                  <img src="../images/youtube.svg" width="20" height="16" alt="YouTube">
+                </div>
+              </a>
+          </div>
         </section>
-        <section>
-          <h1>Разработчик</h1>
-          <p>Website by</p>
-          <a><img src="../images/logo-htmlacademy.png" width="115" height="41" alt="html-academy"></a>
+        <section class="footer-section">
+          <h2 class="visually-hidden">Разработчик</h2>
+          <div class="footer-developer-wrapper">
+            <div >
+              <p>Website by</p>
+            </div>
+            <a class="footer-developer"></a>
+          </div>
         </section>
       </footer>
     </div>
