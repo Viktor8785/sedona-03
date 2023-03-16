@@ -127,7 +127,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  /*flex-wrap: wrap;*/
   justify-content: space-around;
 }
 
@@ -146,11 +145,6 @@
 .navigation-list a:focus {
   color: var(--basic-background-black);
   opacity: 0.3;
-}
-
-.main-main {
-  display: grid;
-  grid-template-rows: 724px 256px 330px 256px 289px 286px 477px;
 }
 
 .main-welcome-wrapper {
@@ -605,7 +599,6 @@
 
 .footer-social {
   display: flex;
-  margin: auto;
   width: 46px;
   height: 48px;
   background-color: var(--basik-blue);
@@ -617,16 +610,11 @@
 
 .footer-social:active {
   background-color: var(--button-blue-active);
-
 }
 
-.footer-social:active img {
+.footer-social:active svg {
   mix-blend-mode: normal;
   opacity: 0.3;
-}
-
-.footer-social-twitter, .footer-social-fb {
-  margin-right: 7px;
 }
 
 .footer-developer-wrapper {
@@ -637,6 +625,7 @@
 .footer-social-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 7px;
 }
 
 .footer-developer-wrapper p {
@@ -1036,4 +1025,86 @@
   margin-top: 20px;
   border: 8px solid var(--minus-plus-fill);
   border-style:double;
+}
+
+/* ---------------------------------------  MODAL  -------------------------------*/
+
+.modal-adv {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.modal-text {
+  display: flex;
+  width: 500px;
+  height: 300px;
+  padding: 50px 80px;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+}
+
+.modal-text div {
+  margin: auto;
+}
+
+.modal-text h2 {
+  margin-bottom: 50px;
+}
+
+.modal-address {
+  display: flex;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.modal-address p {
+  margin: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 19px;
+  height: 19px;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.modal-text button::before,
+.modal-text button::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-white);
+}
+
+.modal-text button:hover .modal-text button::after {
+  background-color: var(--basic-black);
+}
+
+.modal-text button::before {
+  transform: rotate(45deg);
+}
+
+.modal-text button::after {
+  transform: rotate(-45deg);
 }
