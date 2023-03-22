@@ -5,57 +5,73 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.min.css">
   </head>
   <body class="body-wrapper">
     <div class="page-container page-hotels-background">
       <header class="main-header">
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li><a href="blank.html">Информация</a></li>
-            <li><a href="blank.html">Фото и видео</a></li>
-            <li>
-              <a href="../index.html"><img src="../images/logo.png" width="138" height="71" alt="Лого Sedona"></a>
+            <li class="main-navigation-item">
+              <a class="navigation-item-info" href="blank.html">Информация</a>
             </li>
-            <li><a href="map.html">Карта штата</a></li>
-            <li class="navigation-active"><a>Гостиницы</a></li>
+            <li class="main-navigation-item">
+              <a class="navigation-item-norm" href="blank.html">Фото и видео</a>
+            </li>
+            <li>
+              <a href="../index.html">
+                <img src="../images/logo.png" width="138" height="71" alt="Лого Седона">
+              </a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="navigation-item-norm" href="map.html">Карта штата</a>
+            </li>
+            <li class="main-navigation-item navigation-item-active">
+              <a>Гостиницы</a>
+            </li>
           </ul>
         </nav>
       </header>
       <main>
           <section class="hotels-filter">
               <h1 class="visually-hidden">Выбор гостиницы</h1>
-                <form class="hotels-filter-form" method="get" action="blank.html">
+                <form class="hotels-filter-form" method="get" action="https://echo.htmlacademy.ru" target="_blank">
                   <fieldset>
                     <legend><h2>инфраструктура:</h2></legend>
                     <input class="hotels-filter-input visually-hidden" id="search-hotels-pool" type="checkbox" name="hotels-pool"
                     checked>
-                    <label for="search-hotels-pool">бассейн</label>
-                    <input class="hotels-filter-input visually-hidden" id="search-hotels-parking" type="checkbox" name="hotels-parking"
-                    disabled>
-                    <label for="search-hotels-parking">парковка</label>
+                    <label for="search-hotels-pool" tabindex="0">бассейн</label>
+                    <input class="hotels-filter-input visually-hidden" id="search-hotels-parking" type="checkbox" name="hotels-parking">
+                    <label for="search-hotels-parking" tabindex="0">парковка</label>
                     <input class="hotels-filter-input visually-hidden" id="search-hotels-wifi" type="checkbox" name="hotels-wifi">
-                    <label for="search-hotels-wifi">wifi</label>
+                    <label for="search-hotels-wifi" tabindex="0">wifi</label>
                   </fieldset>
                   <fieldset>
                     <legend><h2>тип жилья:</h2></legend>
-                    <input class="hotels-filter-input visually-hidden" id="search-hotels-hotel" type="checkbox" name="hotels-hotel"
-                    checked disabled>
-                    <label for="search-hotels-hotel">гостиница</label>
+                    <input class="hotels-filter-input visually-hidden" id="search-hotels-hotel" type="checkbox" name="hotels-hotel" checked>
+                    <label for="search-hotels-hotel" tabindex="0">гостиница</label>
                     <input class="hotels-filter-input visually-hidden" id="search-hotels-motel" type="checkbox" name="hotels-motel" checked>
-                    <label for="search-hotels-motel">мотель</label>
+                    <label for="search-hotels-motel" tabindex="0">мотель</label>
                     <input class="hotels-filter-input visually-hidden" id="search-hotels-apartment" type="checkbox" name="hotels-apartment" checked>
-                    <label for="search-hotels-apartment">апартаменты</label>
+                    <label for="search-hotels-apartment" tabindex="0">апартаменты</label>
                   </fieldset>
                   <div class="filter-form-price">
                     <label for="search-hotels-price"><h2>стоимость в сутки (р):</h2></label>
                     <table>
                       <tr>
-                        <td>от 0</td>
-                        <td>до 3000</td>
+                        <td>
+                          <label for="hotels-price-from">от</label>
+                          <input class="hotels-price-input" id="hotels-price-from" type="text" name="hotels-price-from"
+                           placeholder="0" required pattern="[0-9]{1,4}">
+                        </td>
+                        <td>
+                          <label for="hotels-price-to">до</label>
+                          <input class="hotels-price-input" id="hotels-price-to" type="text" name="hotels-price-to"
+                           placeholder="3000" required pattern="[0-9]{1,4}">
+                        </td>
                       </tr>
                     </table>
-                    <input id="search-hotels-price" type="range" name="hotels-price"
+                    <input class="search-hotels-price" id="search-hotels-price" type="range" name="hotels-price"
                     min="0" max="4000" value="3000" step="10">
                     <button type="submit">показать</button>
                   </div>
@@ -70,7 +86,7 @@
               <li><a href="">по рейтингу</a></li>
             </ul>
             <a class="hotels-sort-dir hotels-sort-up"></a>
-            <a class="hotels-sort-dir hotels-sort-down"></a>
+            <a class="hotels-sort-dir hotels-sort-down" tabindex="0"></a>
           </section>
           <section class="hotels-searched">
             <ul class="hotels-searched-list">
@@ -147,25 +163,36 @@
         <section class="footer-section">
           <div>
             <h2 class="visually-hidden">Контакты</h2>
-            <p class="footer-contacts">#visitSEDONA<br>ТЕЛ: +7(495) 666-01-66</p>
+            <p class="footer-contacts" aria-label="Телефон">#visitSEDONA<br>ТЕЛ: +7(495) 666-01-66</p>
           </div>
         </section>
         <section class="footer-section">
           <h2 class="visually-hidden">Соцсети</h2>
           <div class="footer-social-wrapper">
-              <a class="footer-social footer-social-twitter">
+              <a class="footer-social footer-social-twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" tabindex="0" aria-label="Твиттер">
                 <div>
-                  <img src="../images/twitter-icon.svg" width="17" height="17" alt="Twitter">
+                  <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.95 1.14a3.1
+                    3.1 0 0 1 3.58 1.18c.67-.23 1.33-.48 2-.7a2.34 2.34 0 0 1-.85 1.76c.69.17 1.3-.49 1.3-.49-.16 1-1
+                     1.79-1.56 2.03C15.2 11.67 12.25 16.13 5.34 16H4.9c-.41 0-4.17-.46-4.9-1.89 2.27.2 3.9-.42 4.7-1.18-.97-.3-2.69-.47-2.99-2.95.35.11.57.23
+                      1.2.12C1.7 9.25.36 8.53.44 6.33a1.9 1.9 0 0 0 1.34.47c-.7-.24-1.97-3.36-.9-4.95 1.82 1.85 3.74 3.6 7.16 3.77.2-2.29 1.13-3.83 2.9-4.48Z"
+                    fill="#fff"/>
+                  </svg>
                 </div>
               </a>
-              <a class="footer-social footer-social-fb">
+              <a class="footer-social footer-social-fb" href="https://htmlacademy.ru" target="_blank" tabindex="0" aria-label="Фейсбук">
                 <div>
-                  <img src="../images/fb-icon.svg" width="12" height="22" alt="Facebook">
+                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>
                 </div>
               </a>
-              <a class="footer-social">
+              <a class="footer-social" href="https://www.youtube.com/user/htmlacademyru" target="_blank" tabindex="0" aria-label="Ютуб">
                 <div>
-                  <img src="../images/youtube.svg" width="20" height="16" alt="YouTube">
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65
+                     16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                     fill="white"/>
+                  </svg>
                 </div>
               </a>
           </div>
@@ -176,10 +203,25 @@
             <div >
               <p>Website by</p>
             </div>
-            <a class="footer-developer"></a>
+            <a class="footer-developer" href="https://htmlacademy.ru" target="_blank" tabindex="0" aria-label="HTML-Академия"></a>
           </div>
         </section>
       </footer>
     </div>
+    <div class="modal-adv">
+      <div class="modal">
+        <div class="modal-text">
+          <div>
+            <h2>Адрес нашего центрадьного офиса:</h2>
+            <div class="modal-address">
+              <img src="../images/kanyon.jpg" width="200" height="150" alt="Каньон">
+              <p>Клаб 'Ундхэм', Уиппет-уэй, 9, Седона, Аризона, США </p>
+            </div>
+          </div>
+          <button class="modal-close" type="button" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.min.js"></script>
   </body>
 </html>
