@@ -61,18 +61,25 @@
                       <tr>
                         <td>
                           <label for="hotels-price-from">от</label>
-                          <input class="hotels-price-input" id="hotels-price-from" type="text" name="hotels-price-from"
+                          <input class="hotels-price-input price-input-from" id="hotels-price-from" type="text" name="hotels-price-from"
                            placeholder="0" required pattern="[0-9]{1,4}">
                         </td>
                         <td>
                           <label for="hotels-price-to">до</label>
-                          <input class="hotels-price-input" id="hotels-price-to" type="text" name="hotels-price-to"
+                          <input class="hotels-price-input price-input-to" id="hotels-price-to" type="text" name="hotels-price-to"
                            placeholder="3000" required pattern="[0-9]{1,4}">
                         </td>
                       </tr>
                     </table>
-                    <input class="search-hotels-price" id="search-hotels-price" type="range" name="hotels-price"
-                    min="0" max="4000" value="3000" step="10">
+                    <div class="slider-container search-hotels-price">
+                      <div class="slider">
+                        <div class="slider-track"></div>
+                          <div class="slider-bar-left"></div>
+                          <div class="slider-bar-right"></div>
+                          <div class="slider-thumb-left"></div>
+                          <div class="slider-thumb-right"></div>
+                      </div>
+                    </div>
                     <button type="submit">показать</button>
                   </div>
                 </form>
@@ -222,6 +229,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/main.min.js"></script>
+    <script src="../js/hotels.min.js"></script>
   </body>
 </html>
