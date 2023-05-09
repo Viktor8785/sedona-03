@@ -224,7 +224,12 @@
                       </div>
                       <div class="header-wrapper">
                         <button class="button-month-prev" id="prev-month" type="button" aria-label="Предыдущий месяц"></button>
-                        <h2 class="month-year" id="month-and-year"></h2>
+                        <div class="month-year-wrapper">
+                          <h2 class="month-current" id="month-current"></h2>
+                          <!--h2 class="year-current" id="year-current"></h2-->
+                          <select class="year-current" id="year-select">
+                          </select>
+                        </div>
                         <button class="button-month-next" id="next-month" type="button" aria-label="Следующий месяц"></button>
                       </div>
                       <table class="calendar-table">
