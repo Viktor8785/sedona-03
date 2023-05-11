@@ -1136,6 +1136,7 @@
   width: 100%;
   border-collapse: collapse;
   border: 2px solid var(--basic-white);
+  margin-bottom: 2px;
 }
 
 .filter-form-price td {
