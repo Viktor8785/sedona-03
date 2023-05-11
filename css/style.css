@@ -1144,9 +1144,10 @@
   height: 29px;
   text-align: center;
   padding: 0;
+  border: 2px solid var(--basic-white);
 }
 
-.filter-form-price table::after {
+/*.filter-form-price table::after {
   position: relative;
   top: -14px;
   left: 150px;
@@ -1159,7 +1160,7 @@
           transform: rotate(90deg);
   background-color: var(--basic-white);
 
-}
+}*/
 
 .hotels-sort {
   width: 1200px;
