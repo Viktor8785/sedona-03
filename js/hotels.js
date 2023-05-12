@@ -83,8 +83,6 @@ sliderThumbLeft.addEventListener('mousedown', (e) => {
 });
 
 sliderThumbLeft.addEventListener('touchstart', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
   isDraggingLeft = true;
 });
 
@@ -94,8 +92,6 @@ sliderThumbRight.addEventListener('mousedown', (e) => {
 });
 
 sliderThumbRight.addEventListener('touchstart', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
   isDraggingRight = true;
 });
 
@@ -134,8 +130,6 @@ document.addEventListener('mouseup', (e) => {
 });
 
 document.addEventListener('touchend', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
   isDraggingLeft = false;
   isDraggingRight = false;
 });
