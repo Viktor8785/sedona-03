@@ -102,7 +102,7 @@ sliderThumbRight.addEventListener('touchstart', (e) => {
 });
 
 sliderContainer.addEventListener('mousemove', (e) => {
-  e.preventDefault();
+  /*e.preventDefault();*/
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
