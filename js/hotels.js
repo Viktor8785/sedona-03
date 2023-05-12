@@ -50,8 +50,7 @@ function keyDown(evt) {
 
 /* HOTELS PRICE */
 priceInputFrom.addEventListener('input', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
+  e.preventDefault();
   let inputPriceMin = Number(priceInputFrom.value);
   if (Number.isNaN(inputPriceMin) || inputPriceMin < 0) {
     inputPriceMin = 0;
@@ -63,11 +62,10 @@ priceInputFrom.addEventListener('input', (e) => {
   };
   xPosLeft = inputPriceMin / priceRatio;
   sliderThumbLeftDragg();
-}, false);
+});
 
 priceInputTo.addEventListener('input', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
+  e.preventDefault();
   let inputPriceMax = Number(priceInputTo.value);
   if (Number.isNaN(inputPriceMax) || inputPriceMax > maxPrice) {
     inputPriceMax = maxPrice;
@@ -79,7 +77,7 @@ priceInputTo.addEventListener('input', (e) => {
   }
   xPosRight = inputPriceMax / priceRatio;
   sliderThumbRightDragg();
-}, false);
+});
 
 sliderThumbLeft.addEventListener('mousedown', (e) => {
   e.preventDefault();
@@ -102,7 +100,6 @@ sliderThumbRight.addEventListener('touchstart', (e) => {
 });
 
 sliderContainer.addEventListener('mousemove', (e) => {
-  /*e.preventDefault();*/
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
@@ -117,8 +114,6 @@ sliderContainer.addEventListener('mousemove', (e) => {
 });
 
 sliderContainer.addEventListener('touchmove', (e) => {
-  /*e.preventDefault();
-  e.stopPropagation();*/
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
@@ -130,7 +125,7 @@ sliderContainer.addEventListener('touchmove', (e) => {
     priceInputTo.value = Math.round(xPosRight * priceRatio);
   };
   return;
-}, false);
+});
 
 document.addEventListener('mouseup', (e) => {
   e.preventDefault();
