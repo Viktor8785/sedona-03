@@ -51,6 +51,7 @@ function keyDown(evt) {
 /* HOTELS PRICE */
 priceInputFrom.addEventListener('input', (e) => {
   e.preventDefault();
+  e.stopPropagation();
   let inputPriceMin = Number(priceInputFrom.value);
   if (Number.isNaN(inputPriceMin) || inputPriceMin < 0) {
     inputPriceMin = 0;
@@ -66,6 +67,7 @@ priceInputFrom.addEventListener('input', (e) => {
 
 priceInputTo.addEventListener('input', (e) => {
   e.preventDefault();
+  e.stopPropagation();
   let inputPriceMax = Number(priceInputTo.value);
   if (Number.isNaN(inputPriceMax) || inputPriceMax > maxPrice) {
     inputPriceMax = maxPrice;
