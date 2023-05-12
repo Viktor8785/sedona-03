@@ -50,8 +50,8 @@ function keyDown(evt) {
 
 /* HOTELS PRICE */
 priceInputFrom.addEventListener('input', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  /*e.preventDefault();
+  e.stopPropagation();*/
   let inputPriceMin = Number(priceInputFrom.value);
   if (Number.isNaN(inputPriceMin) || inputPriceMin < 0) {
     inputPriceMin = 0;
@@ -66,8 +66,8 @@ priceInputFrom.addEventListener('input', (e) => {
 }, false);
 
 priceInputTo.addEventListener('input', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  /*e.preventDefault();
+  e.stopPropagation();*/
   let inputPriceMax = Number(priceInputTo.value);
   if (Number.isNaN(inputPriceMax) || inputPriceMax > maxPrice) {
     inputPriceMax = maxPrice;
@@ -102,6 +102,7 @@ sliderThumbRight.addEventListener('touchstart', (e) => {
 });
 
 sliderContainer.addEventListener('mousemove', (e) => {
+  e.preventDefault();
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
@@ -116,6 +117,7 @@ sliderContainer.addEventListener('mousemove', (e) => {
 });
 
 sliderContainer.addEventListener('touchmove', (e) => {
+  e.preventDefault();
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
