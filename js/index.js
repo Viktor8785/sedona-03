@@ -184,10 +184,6 @@ nextMonth.addEventListener('click', () => {
   showCalendar(currentYear, currentMonth);
 });
 
-/*yearSelect.onfocus = function() {
-  this.size = 12;
-}
-*/
 yearSelect.onchange = function() {
   currentYear = yearSelect.value;
   showCalendar(currentYear, currentMonth);
