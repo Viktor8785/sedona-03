@@ -118,6 +118,7 @@ sliderContainer.addEventListener('mousemove', (e) => {
 
 sliderContainer.addEventListener('touchmove', (e) => {
   e.preventDefault();
+  e.stopPropagation();
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
@@ -129,7 +130,7 @@ sliderContainer.addEventListener('touchmove', (e) => {
     priceInputTo.value = Math.round(xPosRight * priceRatio);
   };
   return;
-});
+}, false);
 
 document.addEventListener('mouseup', (e) => {
   e.preventDefault();
