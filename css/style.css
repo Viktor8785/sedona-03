@@ -1147,21 +1147,6 @@
   border: 2px solid var(--basic-white);
 }
 
-/*.filter-form-price table::after {
-  position: relative;
-  top: -14px;
-  left: 150px;
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  background-color: var(--basic-white);
-
-}*/
-
 .hotels-sort {
   width: 1200px;
   height: 87px;
@@ -1593,11 +1578,11 @@
 }
 
 .calendar {
-  position: absolute;
-  top: -64px;
-  left: 380px;
+  position: relative;
+  top: 10px;
+  left: 190px;
   margin: 0 auto;
-  width: 320px;
+  width: 260px;
   border: 1px solid #ccc;
   border-radius: 2px;
   font-family: Arial, sans-serif;
@@ -1610,7 +1595,8 @@
 }
 
 .header {
-  background-color: transparent
+  background-color: var(--search-hotels-form);
+  line-height: 0;
 }
 
 .header button:hover {
@@ -1626,7 +1612,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding-top: 0;
   background-color: var(--search-hotels-form);
 }
 
@@ -1642,9 +1628,9 @@
 }
 
 .button-close {
-  position: absolute;
-  top: 3px;
-  left: 298px;
+  position: relative;
+  top: 7px;
+  left: 114px;
   width: 14px;
   height: 14px;
   border: 0;
@@ -1758,7 +1744,7 @@
 
 .calendar-table th {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .today {
@@ -1770,7 +1756,7 @@
 .this-month {
   color: #aaaaaa;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   cursor: pointer;
 }
