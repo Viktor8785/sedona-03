@@ -134,8 +134,8 @@ document.addEventListener('mouseup', (e) => {
 });
 
 document.addEventListener('touchend', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  /*e.preventDefault();
+  e.stopPropagation();*/
   isDraggingLeft = false;
   isDraggingRight = false;
 });
