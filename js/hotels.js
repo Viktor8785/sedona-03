@@ -62,7 +62,7 @@ priceInputFrom.addEventListener('input', (e) => {
   };
   xPosLeft = inputPriceMin / priceRatio;
   sliderThumbLeftDragg();
-});
+}, false);
 
 priceInputTo.addEventListener('input', (e) => {
   e.preventDefault();
@@ -77,7 +77,7 @@ priceInputTo.addEventListener('input', (e) => {
   }
   xPosRight = inputPriceMax / priceRatio;
   sliderThumbRightDragg();
-});
+}, false);
 
 sliderThumbLeft.addEventListener('mousedown', (e) => {
   e.preventDefault();
