@@ -84,20 +84,20 @@ sliderThumbLeft.addEventListener('mousedown', (e) => {
   isDraggingLeft = true;
 });
 
-/*sliderThumbLeft.addEventListener('touchstart', (e) => {
-  e.preventDefault();
+sliderThumbLeft.addEventListener('touchstart', (e) => {
+  //e.preventDefault();
   isDraggingLeft = true;
-});*/
+});
 
 sliderThumbRight.addEventListener('mousedown', (e) => {
   e.preventDefault();
   isDraggingRight = true;
 });
 
-/*sliderThumbRight.addEventListener('touchstart', (e) => {
-  e.preventDefault();
+sliderThumbRight.addEventListener('touchstart', (e) => {
+  //e.preventDefault();
   isDraggingRight = true;
-});*/
+});
 
 sliderContainer.addEventListener('mousemove', (e) => {
   if (isDraggingLeft) {
@@ -113,7 +113,7 @@ sliderContainer.addEventListener('mousemove', (e) => {
   return;
 });
 
-/*sliderContainer.addEventListener('touchmove', (e) => {
+sliderContainer.addEventListener('touchmove', (e) => {
   if (isDraggingLeft) {
     xPosLeft = e.pageX - sliderContainer.offsetLeft - pageContainer.offsetLeft;
     sliderThumbLeftDragg();
@@ -125,7 +125,7 @@ sliderContainer.addEventListener('mousemove', (e) => {
     priceInputTo.value = Math.round(xPosRight * priceRatio);
   };
   return;
-});*/
+});
 
 document.addEventListener('mouseup', (e) => {
   e.preventDefault();
@@ -133,11 +133,11 @@ document.addEventListener('mouseup', (e) => {
   isDraggingRight = false;
 });
 
-/*document.addEventListener('touchend', (e) => {
-  e.preventDefault();
+document.addEventListener('touchend', (e) => {
+  //e.preventDefault();
   isDraggingLeft = false;
   isDraggingRight = false;
-});*/
+});
 
 function sliderThumbLeftDragg() {
   maxXPosLeft = slider.offsetWidth - sliderThumbLeft.offsetWidth;
